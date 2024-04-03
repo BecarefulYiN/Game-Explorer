@@ -2,44 +2,26 @@ import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import { Box, styled, Switch, FormGroup, FormControlLabel, ThemeProvider, createTheme, CssBaseline } from '@mui/material'
-import React,  { useState } from 'react'
+import React, { useState } from 'react'
+import SwitchModeButton from '../components/SwitchModeButton'
 
 
 function SignUp() {
 
-  const [darkMode, setDarkMode] = useState(false);
 
-  const handleChange = () => {
-    setDarkMode(!darkMode);
-  };
 
-  const theme = createTheme({
-    palette: {
-      mode: darkMode ? 'dark' : 'light',
-    },
-  });
 
   return (
-    <ThemeProvider theme={theme}>
+
     <Box sx={{ width: '100%', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
 
-      <CssBaseline />
-      <FormGroup sx={{
-        position: 'absolute',
-        top: '20px',
-        right: '20px',
-      }}>
-        <FormControlLabel
-          control={
-            <Switch
-              checked={darkMode}
-              onChange={handleChange}
-              aria-label="mode switch"
-            />
-          }
-          label={darkMode ? 'Light Mode' : 'Dark Mode'}
-        />
-      </FormGroup>
+      <SwitchModeButton
+        style={{
+          position: 'absolute',
+          top: '20px',
+          right: '20px'
+        }}
+      />
 
       <Box sx={{
         display: 'flex',
@@ -75,7 +57,7 @@ function SignUp() {
 
       </Box>
     </Box>
-    </ThemeProvider>
+
   )
 }
 

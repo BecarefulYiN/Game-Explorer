@@ -4,6 +4,7 @@ import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import { Box, styled, Switch, FormGroup, FormControlLabel, ThemeProvider, createTheme, CssBaseline } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
+import SwitchModeButton from './../components/SwitchModeButton';
 
 const LoginInput = styled(TextField)(({ }) => ({
   width: '20vw'
@@ -13,44 +14,20 @@ function Login() {
 
   const navigate = useNavigate()
 
-  const [darkMode, setDarkMode] = useState(false);
-
-  const handleChange = () => {
-    setDarkMode(!darkMode);
-  };
-
-  const theme = createTheme({
-    palette: {
-      mode: darkMode ? 'dark' : 'light',
-    },
-  });
-
   const handleSignUp = () => {
     navigate(`/SignUp`)
   }
 
   return (
-    <ThemeProvider theme={theme}>
       <Box sx={{ width: '100%', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
 
-
-        <CssBaseline />
-        <FormGroup sx={{
-          position: 'absolute',
-          top: '20px',
-          right: '20px',
-        }}>
-          <FormControlLabel
-            control={
-              <Switch
-                checked={darkMode}
-                onChange={handleChange}
-                aria-label="mode switch"
-              />
-            }
-            label={darkMode ? 'Light Mode' : 'Dark Mode'}
-          />
-        </FormGroup>
+        <SwitchModeButton
+          style={{
+            position: 'absolute',
+            top: '20px',
+            right: '20px'
+          }}
+        />
 
         <Typography variant=''></Typography>
 
@@ -104,7 +81,7 @@ function Login() {
 
         </Box>
       </Box>
-    </ThemeProvider>
+
 
   )
 }
