@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import { Routes, Route } from "react-router-dom";
 import { useContext } from "react";
+import  Home  from "./pages/Home";
 
 function App() {
 
@@ -16,7 +17,6 @@ function App() {
     }
   })
 
-
   return (
     <>
       <ThemeProvider theme = {theme}>
@@ -24,6 +24,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Login />}></Route>
           <Route path='/SignUp' element={<SignUp />}></Route>
+          <Route path= '/Home' element={<Home/>}></Route>
         </Routes>
       </ThemeProvider>
 
