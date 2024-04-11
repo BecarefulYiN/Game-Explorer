@@ -16,12 +16,13 @@ function LeftBar() {
   return (
     <Box sx={{
       width: '15vw',
-      height: '100vh',
+      height: 'auto',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       borderRight: '1px solid black'
     }}>
+      <LeftCategory>Home</LeftCategory>
       <LeftCategory>Store</LeftCategory>
       <LeftCategory>Library</LeftCategory>
     </Box>

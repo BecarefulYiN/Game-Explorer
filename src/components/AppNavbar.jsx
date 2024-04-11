@@ -7,7 +7,7 @@ function AppNavbar() {
 
   return (
     <>
-      <AppBar position='fix' >
+      <AppBar >
         <Toolbar>
           <IconButton
             size="large"

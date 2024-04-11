@@ -2,7 +2,7 @@ import React from 'react'
 import AppNavbar from '../components/AppNavbar'
 import LeftBar from '../components/HomePage/LeftBar'
 import { Box } from '@mui/material'
-import Main from '../components/HomePage/Main'
+import MainHome from '../components/HomePage/MainHome/MainHome'
 
 
 function Home() {
@@ -11,12 +11,13 @@ function Home() {
       <AppNavbar/>
       <Box
         sx={{
+          marginTop: '4vw',
           display: 'flex',
           flexDirection: 'row'
         }}
       >
         <LeftBar/>
-        <Main/>
+        <MainHome/>
       </Box>
       
     </>

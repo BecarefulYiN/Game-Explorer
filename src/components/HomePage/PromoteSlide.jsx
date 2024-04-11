@@ -31,7 +31,7 @@ function PromoteSlide() {
   };
 
   return (
-    <Box sx={{ width: '70vw', height: 'auto'}}>
+    <Box sx={{ width: '70vw', height: 'auto', }}>
       <Slider {...settings}>
         {images.map((image, index) => (
           <Card key={index}>  
